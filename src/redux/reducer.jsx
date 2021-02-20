@@ -12,15 +12,17 @@ const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ADD_ITEM:
       return {
-        wishList: ,
+        wishList: [...state.wishList, action.payload],
       };
     case DELETE_ITEM:
       return {
-        wishList: ,
+        wishList: state.wishList.filter( (item) => {
+          return item !== action.payload
+        }),
       };
     default:
       return {
-        wishList: ,
+        wishList: [state.wishList],
       };
   }
 };
