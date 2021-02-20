@@ -95,7 +95,7 @@ const App = () =>  {
 
     const submit = () => {
 
-        if (wishList) {
+        if (wishList.length > 0) {
             alert('wish list submitted to santa!')
             wishList.forEach( (item) => {
                 dispatch(deleteItem(item));
